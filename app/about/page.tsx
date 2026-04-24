@@ -108,12 +108,12 @@ export default function About() {
           <div className="prose-mono min-w-0">
             <h2 className="!mt-0">The company</h2>
             <p>
-              <strong>Veyago Inc.</strong> is a Delaware C-Corporation, currently being formed. 1,000,000 shares
+              <strong>Veyago Inc.</strong> is a Delaware C-Corporation, forming May–June 2026. 1,000,000 shares
               authorised. Sole founder and 100% shareholder: <strong>Cassian Drefke</strong>.
             </p>
             <p>
               The app is approximately <strong>20% built</strong> as of April 2026. Launch target:{" "}
-              <strong>Q3 2026</strong> on iOS and Android simultaneously.
+              <strong>Early Q3 2026</strong> on iOS and Android simultaneously.
             </p>
             <p>
               A pre-seed round is open — <strong>€350,000</strong> on a SAFE note. Minimum check:{" "}
@@ -212,8 +212,8 @@ function FounderCard() {
         Solo founder. Building Veyago from the ground up — product, code, design, and strategy.
       </p>
       <ul className="mt-5 space-y-2 text-xs text-gray-1">
-        <li>· Best Delegate — CWMUN New York 2026</li>
         <li>· React Native · Supabase · full-stack</li>
+        <li>· Brussels, Belgium</li>
       </ul>
       <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/5 pt-5 text-xs">
         <a

@@ -11,7 +11,7 @@ const faqs = [
   { q: "How much does it cost?", a: "Free forever with three group sessions a month and up to four friends per session. Premium is €4.99/month (€29.99/year) — unlimited sessions, up to ten friends, full AI itinerary, no ads." },
   { q: "iOS and Android?", a: "Yes — both ship together in early Q3 2026, feature parity from day one." },
   { q: "How many people can join a group?", a: "Up to four friends on free, up to ten on Premium. Sessions are real-time — everyone swipes at once." },
-  { q: "Is it safe with my friends’ data?", a: "Minimum data, EU-hosted (Frankfurt), no cross-site tracking, one-click delete. Your swipes are private in Round 1." },
+  { q: "Is it safe with my friends’ data?", a: "Minimum data, EU-hosted (AWS eu-west-1, Ireland), no cross-site tracking, one-click delete. Your swipes are private in Round 1." },
 ];
 
 export default function FAQ() {

@@ -11,7 +11,7 @@ const round = [
   ["Instrument", "SAFE (YC standard, post-money)"],
   ["Target raise", "€350,000"],
   ["Valuation cap", "€6–8M"],
-  ["Minimum check", "€25,000"],
+  ["Minimum check", "€5,000"],
   ["Close target", "July 2026"],
 ];
 
@@ -23,7 +23,7 @@ const inRoom = [
   "Financial projections (3-year monthly)",
   "Cap table",
   "SAFE template (YC standard)",
-  "IP assignment (TDC → Cassian → Veyago Inc.)",
+  "IP assignment agreement",
 ];
 
 const fit = [
@@ -47,7 +47,7 @@ export default function Investors() {
           <div className="flex flex-wrap gap-3">
             <a
               href="#request-access"
-              className="bg-white text-navy px-5 py-3 rounded-btn font-medium text-sm"
+              className="bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium text-sm"
             >
               Request access →
             </a>
@@ -155,7 +155,7 @@ export default function Investors() {
               <Field label="LinkedIn URL" />
               <Field label="Check size range" placeholder="e.g. €25k–€100k" />
               <TextArea label="Anything you want Cassian to know" />
-              <button type="submit" className="w-full bg-white text-navy px-5 py-3 rounded-btn font-medium text-sm mt-2">
+              <button type="submit" className="w-full bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium text-sm mt-2">
                 Request access
               </button>
             </form>

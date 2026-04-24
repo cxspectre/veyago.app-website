@@ -140,7 +140,7 @@ export default function InteractiveSwipe() {
                   <p className="mt-2 text-sm text-gray-1">That&apos;s Veyago.</p>
                   <MagneticLink
                     href="/waitlist"
-                    className="mt-6 bg-white px-5 py-2.5 text-sm font-medium text-navy rounded-btn hover:bg-offwhite transition-colors"
+                    className="mt-6 bg-ink-100 px-5 py-2.5 text-sm font-medium text-ink-00 rounded-btn hover:bg-ink-90 transition-colors"
                   >
                     Get early access
                   </MagneticLink>
@@ -236,7 +236,7 @@ function ActionPill({
     "inline-flex min-w-[5.5rem] flex-col items-center justify-center gap-0.5 rounded-full border px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] transition-colors disabled:pointer-events-none disabled:opacity-35";
   const styles =
     variant === "solid"
-      ? "border-white bg-white text-navy hover:bg-offwhite"
+      ? "border-ink-90 bg-ink-100 text-ink-00 hover:bg-ink-90"
       : variant === "gold"
       ? "border-[rgba(212,168,83,0.55)] bg-[linear-gradient(180deg,rgba(212,168,83,0.18)_0%,rgba(212,168,83,0.06)_100%)] text-[#f3e6c8] hover:border-[rgba(212,168,83,0.85)]"
       : "border-white/20 bg-white/[0.04] text-gray-1 hover:border-white/40 hover:bg-white/[0.08] hover:text-white";

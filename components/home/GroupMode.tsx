@@ -44,7 +44,7 @@ export default function GroupMode() {
         <div>
           <div className="flex items-center justify-between">
             <SectionIndex n="02" label="Group mode" />
-            <StatusChip kicker="Currently" label="847 active" />
+            <StatusChip kicker="Demo" label="Session · Live" />
           </div>
           <RevealHeadline
             className="display text-[2.25rem] sm:text-[3rem] lg:text-[3.75rem] xl:text-[4.5rem] leading-[0.88] tracking-[-0.03em]"
@@ -174,7 +174,7 @@ export function Dashboard() {
 
           <div className="mt-6 pt-5 border-t border-white/5 flex items-center justify-between">
             <span className="text-xs text-gray-2">Ready to finish the round?</span>
-            <button className="text-xs bg-white text-navy px-3 py-2 rounded-btn font-medium">
+            <button className="text-xs bg-ink-100 text-ink-00 px-3 py-2 rounded-btn font-medium">
               Finish round →
             </button>
           </div>

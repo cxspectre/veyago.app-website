@@ -9,7 +9,7 @@ export default function NotFound() {
         <p className="text-gray-1 mb-8">
           The page you’re looking for isn’t here. Maybe it’s still in the bracket.
         </p>
-        <Link href="/" className="bg-white text-navy px-5 py-3 rounded-btn font-medium text-sm inline-flex">
+        <Link href="/" className="bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium text-sm inline-flex">
           Back home →
         </Link>
       </div>

@@ -51,7 +51,7 @@ export default function Careers() {
               <Input label="LinkedIn or portfolio URL" />
               <Select label="Role" options={roles} />
               <TextArea label="Short note (optional)" />
-              <button className="w-full bg-white text-navy px-5 py-3 rounded-btn font-medium text-sm mt-2">
+              <button className="w-full bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium text-sm mt-2">
                 Send
               </button>
             </form>

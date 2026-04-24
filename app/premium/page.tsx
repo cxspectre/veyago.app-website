@@ -92,7 +92,7 @@ export default function Premium() {
         <div className="mt-12 text-center">
           <Link
             href="/waitlist"
-            className="inline-flex items-center gap-2 text-sm bg-white text-navy px-5 py-3 rounded-btn font-medium"
+            className="inline-flex items-center gap-2 text-sm bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium"
           >
             Join the waitlist →
           </Link>
@@ -129,7 +129,7 @@ function PlanCard({
   return (
     <div
       className={`rounded-card p-8 relative overflow-hidden ${
-        outline ? "border border-white/10 bg-surface" : "border border-white bg-white text-navy"
+        outline ? "border border-white/10 bg-surface" : "border border-ink-90 bg-ink-100 text-ink-00"
       }`}
     >
       <div className="flex items-baseline justify-between mb-4">
