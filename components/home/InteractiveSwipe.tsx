@@ -84,7 +84,7 @@ export default function InteractiveSwipe() {
               <span aria-hidden className="block h-px w-8 shrink-0 bg-white/12" />
               <span className="text-gray-2">Try it</span>
             </div>
-            <StatusChip kicker="Live demo" label={`${swiped} / ${DECK_LEN} swiped`} pulse={false} />
+            <StatusChip kicker="Demo" label={`${swiped} / ${DECK_LEN} swiped`} pulse={false} />
           </div>
 
           {!done && (

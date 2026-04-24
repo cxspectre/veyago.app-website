@@ -126,12 +126,12 @@ export default function About() {
               >
                 Investor materials →
               </Link>
-              <Link
-                href="/press"
+              <a
+                href="mailto:press@veyago.app?subject=Press%20inquiry%20%E2%80%94%20Veyago"
                 className="rounded-btn border border-white/20 px-4 py-2.5 text-sm text-white transition-colors hover:bg-white/5"
               >
-                Press kit →
-              </Link>
+                Email press →
+              </a>
             </div>
           </div>
           <dl className="grid shrink-0 grid-cols-2 gap-6 gap-y-8 text-sm sm:min-w-[16rem]">

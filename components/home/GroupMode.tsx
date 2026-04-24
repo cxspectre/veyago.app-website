@@ -44,7 +44,7 @@ export default function GroupMode() {
         <div>
           <div className="flex items-center justify-between">
             <SectionIndex n="02" label="Group mode" />
-            <StatusChip kicker="Demo" label="Session · Live" />
+            <StatusChip kicker="Demo" label="Session preview" />
           </div>
           <RevealHeadline
             className="display text-[2.25rem] sm:text-[3rem] lg:text-[3.75rem] xl:text-[4.5rem] leading-[0.88] tracking-[-0.03em]"
@@ -84,7 +84,7 @@ function Bullet({ children }: { children: React.ReactNode }) {
 export function Dashboard() {
   return (
     <div className="relative rounded-card border border-white/10 bg-surface overflow-hidden shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)]">
-      <CornerMarks code="VYG-02-7K2M" label="Session · Live" />
+      <CornerMarks code="VYG-02-7K2M" label="Session preview" />
       <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
         <div className="flex items-center gap-3">
           <div className="w-7 h-7 rounded-btn border border-white/15 grid place-items-center">
@@ -134,7 +134,7 @@ export function Dashboard() {
         <div className="p-6 bg-navy/40">
           <div className="flex items-center justify-between mb-5">
             <div className="text-[10px] uppercase tracking-widest text-gray-3">Matches so far</div>
-            <div className="text-[10px] uppercase tracking-widest text-white/60">Live</div>
+            <div className="text-[10px] uppercase tracking-widest text-white/60">Example</div>
           </div>
           <ul className="space-y-3">
             {matches.map((m, i) => {

@@ -35,10 +35,6 @@ export default function Waitlist() {
           </li>
         </ul>
 
-        <div className="mt-12 text-xs text-gray-3">
-          <span className="display text-white">1,284 travellers</span> already on the list.
-        </div>
-
         <p className="mt-10 text-xs text-gray-3 max-w-sm">
           One email at launch. That’s it. Unsubscribe in one click. Read our{" "}
           <Link href="/privacy" className="underline hover:text-white">privacy policy</Link>.

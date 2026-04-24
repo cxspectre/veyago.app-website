@@ -56,8 +56,8 @@ const features: Feature[] = [
     slug: "map",
     n: "05",
     name: "Explorer map",
-    one: "Fog-of-war world map. Every swipe paints a pixel.",
-    long: "White = explored, dark = unknown. Your map fills in as you swipe, win, and travel. Background location off by default, fully GDPR opt-in.",
+    one: "Optional map of places you’ve visited.",
+    long: "Turn it on when you want a quiet world view of countries and cities you’ve been to — drawn on Natural Earth land and borders, not cluttered tiles. Opt in for location or photo imports; turn it off anytime in Settings.",
     preview: "map",
   },
 ];

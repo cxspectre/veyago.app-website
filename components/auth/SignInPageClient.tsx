@@ -3,14 +3,27 @@
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useMemo, FormEvent } from "react";
+import CopyStyledEmailButton from "@/components/CopyStyledEmailButton";
 import { destinations } from "@/lib/destinations";
+import { buildTeamSignInDraftBody } from "@/lib/emailDraftBodies";
+import { buildTeamSignInDraftHtml } from "@/lib/emailDraftHtml";
+import { EMAIL_FLOW_DISCLAIMER_UI } from "@/lib/emailFlowDisclaimer";
+import { openEmailDraft } from "@/lib/mailto";
 
 const slides = destinations.slice(0, 5);
+
+const TEAM_EMAIL = "cassian@veyago.app";
 
 export default function SignInPageClient() {
   const reduced = useReducedMotion();
   const [i, setI] = useState(0);
+  const [workEmail, setWorkEmail] = useState("");
+  const [accessNote, setAccessNote] = useState("");
+
+  const plainDraft = useMemo(() => buildTeamSignInDraftBody(workEmail, accessNote), [workEmail, accessNote]);
+  const htmlDraft = useMemo(() => buildTeamSignInDraftHtml(workEmail, accessNote), [workEmail, accessNote]);
+
   const next = useCallback(() => setI((v) => (v + 1) % slides.length), []);
   const prev = useCallback(() => setI((v) => (v - 1 + slides.length) % slides.length), []);
 
@@ -35,10 +48,16 @@ export default function SignInPageClient() {
           <div className="text-[10px] uppercase tracking-[0.2em] text-amber-200/90">Employees · internal</div>
           <h2 className="display mt-2 text-xl text-white sm:text-2xl">Team sign-in</h2>
           <p className="mt-3 text-sm leading-relaxed text-gray-1">
-            Use your <strong className="text-white/90">@veyago.app</strong> email only. Personal accounts are
-            not provisioned yet.
+            Use your <strong className="text-white/90">@veyago.app</strong> email only. Personal accounts are not
+            provisioned yet.
           </p>
-          <form className="mt-8 space-y-4" onSubmit={(e) => e.preventDefault()}>
+
+          <form
+            className="mt-8 space-y-4"
+            onSubmit={(e: FormEvent) => {
+              e.preventDefault();
+            }}
+          >
             <label className="block">
               <span className="mb-1.5 block text-[10px] uppercase tracking-[0.18em] text-gray-3">Work email</span>
               <input
@@ -67,13 +86,69 @@ export default function SignInPageClient() {
               Sign in
             </button>
             <p className="text-center text-[11px] leading-relaxed text-gray-3">
-              SSO and password handoff are being wired. If you need access today, ping Cassian on Slack or email{" "}
-              <a href="mailto:cassian@veyago.app" className="text-gray-1 underline decoration-white/20 underline-offset-4 hover:text-white">
-                cassian@veyago.app
+              SSO and password handoff are being wired. If you need access today, use the section below or email{" "}
+              <a
+                href={`mailto:${TEAM_EMAIL}`}
+                className="text-gray-1 underline decoration-white/20 underline-offset-4 hover:text-white"
+              >
+                {TEAM_EMAIL}
               </a>
               .
             </p>
           </form>
+
+          <div className="mt-10 space-y-4 border-t border-white/10 pt-8">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-gray-3">Need access before SSO lands?</p>
+              <p className="mt-1 text-sm leading-relaxed text-gray-1">
+                Not a login form — this opens a pre-filled email so we can route you without running your message
+                through our web servers.
+              </p>
+            </div>
+            <label className="block">
+              <span className="mb-1.5 block text-[10px] uppercase tracking-[0.18em] text-gray-3">Email for this request</span>
+              <input
+                type="email"
+                autoComplete="email"
+                placeholder="you@veyago.app"
+                value={workEmail}
+                onChange={(e) => setWorkEmail(e.target.value)}
+                className="w-full rounded-btn border border-white/15 bg-black/30 px-4 py-3 text-sm text-white outline-none ring-white/20 placeholder:text-gray-3 focus:border-white/30 focus:ring-2"
+              />
+            </label>
+            <label className="block">
+              <span className="mb-1.5 block text-[10px] uppercase tracking-[0.18em] text-gray-3">Short note (optional)</span>
+              <textarea
+                rows={2}
+                placeholder="e.g. role, what you need access to"
+                value={accessNote}
+                onChange={(e) => setAccessNote(e.target.value)}
+                className="w-full resize-none rounded-btn border border-white/15 bg-black/30 px-4 py-3 text-sm text-white outline-none ring-white/20 placeholder:text-gray-3 focus:border-white/30 focus:ring-2"
+              />
+            </label>
+            <div className="flex flex-col gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  if (!workEmail.trim()) return;
+                  const subject = "[Veyago] Team sign-in / access";
+                  openEmailDraft(TEAM_EMAIL, subject, plainDraft);
+                }}
+                disabled={!workEmail.trim()}
+                className="w-full rounded-btn border border-white/15 bg-ink-100 px-4 py-3 text-sm font-medium text-ink-00 hover:bg-ink-90 transition-colors disabled:cursor-not-allowed disabled:opacity-45"
+              >
+                Open in email app
+              </button>
+              <CopyStyledEmailButton plain={plainDraft} html={htmlDraft} disabled={!workEmail.trim()} />
+            </div>
+            <div className="space-y-2 border-t border-white/10 pt-3 text-center">
+              <p className="text-[11px] leading-relaxed text-gray-3">
+                Plain mailto to {TEAM_EMAIL}. Styled block: copy, then select all in the body and paste. Slack works too
+                if you already have a thread.
+              </p>
+              <p className="text-[11px] leading-relaxed text-gray-3">{EMAIL_FLOW_DISCLAIMER_UI}</p>
+            </div>
+          </div>
         </section>
 
         <section className="relative overflow-hidden rounded-card border border-white/10 bg-[#050c18] shadow-[0_24px_80px_-48px_rgba(0,0,0,0.88)]">

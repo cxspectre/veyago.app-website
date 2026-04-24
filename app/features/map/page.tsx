@@ -6,7 +6,7 @@ import { WaitlistInline } from "@/components/CTABlocks";
 export const metadata: Metadata = {
   title: "Explorer map",
   description:
-    "Every swipe paints your map. A simple world view: continent landmasses and country outlines — no noisy basemap.",
+    "Optional map of places you’ve visited — Natural Earth land and country outlines, no cluttered third-party map tiles. Opt in anytime.",
 };
 
 export default function Map() {
@@ -15,12 +15,11 @@ export default function Map() {
       <section className="pt-32 pb-4">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="text-xs uppercase tracking-widest text-gray-3 mb-5">Feature · 05</div>
-          <h1 className="display text-5xl sm:text-7xl mb-6 leading-[0.98]">
-            Every swipe paints your map.
-          </h1>
+          <h1 className="display text-5xl sm:text-7xl mb-6 leading-[0.98]">Places you’ve actually been.</h1>
           <p className="text-lg text-gray-1 max-w-2xl">
-            The explorer map stays deliberately quiet: Natural Earth land and country borders only. Your
-            saves and trips layer on top later — no fake street tiles, no clutter.
+            Explorer Map is an <strong className="text-white font-medium">opt-in</strong> view of countries and cities
+            you’ve visited. We draw it on calm Natural Earth land and borders — not noisy commercial map tiles — so
+            the geography reads clearly and the focus stays on your footprint.
           </p>
         </div>
       </section>
@@ -35,13 +34,12 @@ export default function Map() {
         <div className="mx-auto max-w-4xl px-5 sm:px-8 space-y-16">
           <Section title="Outlines, not noise">
             <p>
-              We start from a familiar globe: continents read as landmass fill, countries as thin admin
-              lines. That keeps orientation obvious while your own progress (saves, trips, wins) can sit on
-              top without fighting a busy basemap.
+              Continents read as landmass fill; countries read as thin admin lines. That keeps orientation obvious
+              without a busy basemap fighting for attention.
             </p>
             <p>
-              Over time the map becomes a one-glance story of where you’ve been and where you’re leaning next
-              — geography first, your signal second.
+              When you enable Explorer Map, your visited places are the story — geography first, your history second.
+              Swiping and brackets stay in their own flow; this screen is for the footprint you choose to show.
             </p>
           </Section>
 
@@ -54,8 +52,12 @@ export default function Map() {
 
           <Section title="Your data, your map">
             <p>
-              Background location is <strong>off by default</strong> and fully GDPR opt-in. Without it, the
-              map fills in from your saves and your winners only. No silent tracking.
+              Precise location and photo imports are <strong>off by default</strong> and fully opt-in under GDPR. We
+              only collect what you explicitly enable for Explorer Map — see the{" "}
+              <Link href="/privacy" className="underline hover:text-white">
+                privacy policy
+              </Link>{" "}
+              for categories and retention.
             </p>
             <p>
               The map is stored in Supabase against your account. When you delete your account, the map is

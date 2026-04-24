@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import InvestorsDataRoomForm from "@/components/InvestorsDataRoomForm";
 
 export const metadata: Metadata = {
   title: "Investors",
@@ -77,33 +78,37 @@ export default function Investors() {
 
           <div className="rounded-card border border-white/10 bg-surface p-6">
             <div className="text-xs uppercase tracking-widest text-gray-3 mb-5">Traction</div>
-            <div className="grid grid-cols-2 gap-4">
-              <Stat label="Waitlist" value="1,284" />
-              <Stat label="Destinations ready" value="162" />
-              <Stat label="Built" value="62%" />
-              <Stat label="Build-log subscribers" value="412" />
-            </div>
-            <div className="mt-6 pt-4 border-t border-white/10 text-xs text-gray-3">
-              Live counters. Updated weekly.
-            </div>
+            <p className="text-sm leading-relaxed text-gray-1">
+              Pre-launch. Waitlist size, growth, and other operating metrics are shared with qualified investors
+              in the data room — we don&apos;t publish live counters on the public site.
+            </p>
+            <ul className="mt-5 space-y-2.5 text-sm text-gray-2">
+              <li className="flex gap-2">
+                <span className="text-white/50" aria-hidden>
+                  ·
+                </span>
+                Curated destination deck and core flows in active development (see build log).
+              </li>
+              <li className="flex gap-2">
+                <span className="text-white/50" aria-hidden>
+                  ·
+                </span>
+                Early access list open; launch targeted early Q3 2026.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section className="pb-16">
-        <div className="mx-auto max-w-4xl px-5 sm:px-8 grid md:grid-cols-[1.2fr_1fr] gap-10">
-          <div>
-            <div className="text-xs uppercase tracking-widest text-gray-3 mb-5">The 30-second pitch</div>
-            <p className="text-gray-1 text-lg leading-relaxed">
-              Group travel planning is broken. Eight people, forty-three messages, zero decisions. Veyago
-              replaces that with a swipe-and-bracket flow: 20 destinations, four elimination rounds, one
-              winner, one auto-generated day-by-day plan. Premium is €4.99/mo. Booking links are
-              affiliate-disclosed. EU-hosted, GDPR-first, iOS and Android at launch. Early Q3 2026.
-            </p>
-          </div>
-          <div className="aspect-video bg-surface border border-white/10 rounded-card flex items-center justify-center text-gray-3 text-sm">
-            60-second founder video
-          </div>
+        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+          <div className="text-xs uppercase tracking-widest text-gray-3 mb-5">The 30-second pitch</div>
+          <p className="text-gray-1 text-lg leading-relaxed max-w-3xl">
+            Group travel planning is broken. Eight people, forty-three messages, zero decisions. Veyago
+            replaces that with a swipe-and-bracket flow: 20 destinations, four elimination rounds, one
+            winner, one auto-generated day-by-day plan. Premium is €4.99/mo. Booking links are
+            affiliate-disclosed. EU-hosted, GDPR-first, iOS and Android at launch. Early Q3 2026.
+          </p>
         </div>
       </section>
 
@@ -148,17 +153,7 @@ export default function Investors() {
             <p className="text-sm text-gray-1 mb-6">
               Submissions are approved manually. Links expire in 30 days. Documents are watermarked.
             </p>
-            <form className="space-y-3">
-              <Field label="Name" />
-              <Field label="Email" type="email" />
-              <Field label="Firm (optional)" />
-              <Field label="LinkedIn URL" />
-              <Field label="Check size range" placeholder="e.g. €25k–€100k" />
-              <TextArea label="Anything you want Cassian to know" />
-              <button type="submit" className="w-full bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium text-sm mt-2">
-                Request access
-              </button>
-            </form>
+            <InvestorsDataRoomForm />
           </div>
         </div>
       </section>
@@ -166,36 +161,3 @@ export default function Investors() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <div className="display text-3xl">{value}</div>
-      <div className="text-[10px] uppercase tracking-widest text-gray-3 mt-1">{label}</div>
-    </div>
-  );
-}
-
-function Field({ label, type = "text", placeholder = "" }: { label: string; type?: string; placeholder?: string }) {
-  return (
-    <label className="block">
-      <span className="text-xs uppercase tracking-widest text-gray-3">{label}</span>
-      <input
-        type={type}
-        placeholder={placeholder}
-        className="mt-1 w-full bg-navy border border-white/10 rounded-input px-4 py-3 text-sm text-white placeholder:text-gray-3 focus:border-white/40 outline-none"
-      />
-    </label>
-  );
-}
-
-function TextArea({ label }: { label: string }) {
-  return (
-    <label className="block">
-      <span className="text-xs uppercase tracking-widest text-gray-3">{label}</span>
-      <textarea
-        rows={3}
-        className="mt-1 w-full bg-navy border border-white/10 rounded-input px-4 py-3 text-sm text-white placeholder:text-gray-3 focus:border-white/40 outline-none resize-none"
-      />
-    </label>
-  );
-}

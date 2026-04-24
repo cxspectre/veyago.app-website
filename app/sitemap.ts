@@ -19,7 +19,6 @@ const urls = [
   "/about",
   "/build-log",
   "/faq/why-solo",
-  "/press",
   "/careers",
   "/contact",
   "/help",

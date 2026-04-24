@@ -20,7 +20,7 @@ export default function DestinationsTeaser() {
           <div>
             <div className="flex items-center justify-between">
               <SectionIndex n="06" label="Destinations" />
-              <StatusChip kicker="Curated" label="200 / 500 launch" pulse={false} />
+              <StatusChip kicker="Curated" label="Launch deck" pulse={false} />
             </div>
             <RevealHeadline
               className="display text-[2.25rem] sm:text-[3rem] lg:text-[3.75rem] xl:text-[4.5rem] leading-[0.88] tracking-[-0.03em]"
@@ -51,7 +51,7 @@ export default function DestinationsTeaser() {
         </div>
 
         <div className="mt-14 flex flex-wrap items-baseline justify-between gap-4 text-xs uppercase tracking-[0.22em] text-gray-3">
-          <div>Showing 6 of 200 · More at launch</div>
+          <div>Preview — six from the curated deck</div>
           <Link href="/features" className="text-gray-1 hover:text-white">
             See how destinations become a plan →
           </Link>

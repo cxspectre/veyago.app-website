@@ -8,7 +8,7 @@ The public website for Veyago — `veyago.app`. Next.js 15 (App Router), Tailwin
 - **Product** — `/features`, `/features/{swipe,bracket,group-mode,itinerary,map}`, `/premium`
 - **Build-in-public** — `/build-log`, `/build-log/{slug}`, `/roadmap`, `/changelog`
 - **Investor** — `/investors`, `/investors/room` (gated), `/investors/updates` (gated), `/invest`
-- **Company** — `/about`, `/press`, `/careers`, `/contact`
+- **Company** — `/about`, `/careers`, `/contact` (`/press` redirects to `/contact` for now)
 - **Support & legal** — `/help`, `/status`, `/privacy`, `/terms`, `/cookies`, `/dmca`, `/acceptable-use`, `/security`, `/gdpr`
 
 See `Veyago_Website_Feature_Deck_v1.pdf` for the full spec.

@@ -36,23 +36,27 @@ export default function ExplorerMap() {
                   as="h2"
                   className={headlineClass}
                   lines={[
-                    { text: "Every swipe" },
-                    { text: "paints your map.", className: "italic text-white/78" },
+                    { text: "Places you’ve" },
+                    { text: "actually been.", className: "italic text-white/78" },
                   ]}
                 />
                 <p className="max-w-xl text-[0.9375rem] leading-relaxed text-white/88 sm:text-lg sm:leading-relaxed [text-shadow:0_1px_32px_rgba(0,0,0,0.65)]">
-                  A calm world frame for where you’ve been and where you’re leaning next. No tiles, no noise —
-                  just land and borders so the story stays yours.
+                  Explorer Map is optional: when you turn it on, you get a quiet world view of countries and cities
+                  you’ve visited — drawn from land and borders, not cluttered map tiles. Leave it off until you want
+                  it; switch it off in Settings anytime.
                 </p>
-                <div className="max-w-md rounded-card border border-white/[0.12] bg-black/45 p-4 shadow-[0_20px_60px_-28px_rgba(0,0,0,0.85)] backdrop-blur-md sm:p-5">
-                  <div className="grid grid-cols-3 gap-4 sm:gap-6">
-                    <Stat label="Continents" value="07" />
-                    <Stat label="Countries" value="177" />
-                    <Stat label="Data" value="110m" />
-                  </div>
+                <div className="flex max-w-md flex-wrap gap-2">
+                  {["Opt-in only", "Natural Earth outlines", "No third-party map tiles"].map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-white/[0.14] bg-black/40 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-white/70 backdrop-blur-sm sm:text-[11px]"
+                    >
+                      {t}
+                    </span>
+                  ))}
                 </div>
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/45 sm:text-[11px]">
-                  Natural Earth · land + admin boundaries
+                  Land + admin boundaries · public-domain geography data
                 </div>
               </div>
             </>
@@ -119,11 +123,3 @@ export function MapVisualization({
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <div className="display text-3xl tabular-nums text-white">{value}</div>
-      <div className="mt-1 text-[10px] uppercase tracking-[0.22em] text-gray-3">{label}</div>
-    </div>
-  );
-}

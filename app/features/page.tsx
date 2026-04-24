@@ -39,7 +39,7 @@ const tiles = [
   {
     slug: "map",
     name: "Explorer map",
-    one: "Every swipe paints your world.",
+    one: "Optional map of places you’ve visited.",
     imageSlug: "cape-town" as const,
   },
 ];

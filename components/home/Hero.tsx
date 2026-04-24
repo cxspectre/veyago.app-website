@@ -10,16 +10,28 @@ import {
   useSpring,
   useScroll,
 } from "framer-motion";
-import { useEffect, useState, useRef, MouseEvent } from "react";
+import { useEffect, useState, useRef, useCallback, MouseEvent } from "react";
 import { destinations } from "@/lib/destinations";
 import { heroBackdropImage } from "@/lib/marketingImagery";
 import MagneticLink from "@/components/MagneticLink";
+import HeroGroupChat from "@/components/home/HeroGroupChat";
 
 const LINE_1 = "Pick a place.";
 const LINE_2 = "Not a fight.";
 
 export default function Hero() {
   const reduced = useReducedMotion();
+  const reducedBool = !!reduced;
+  const [phoneShowSwipe, setPhoneShowSwipe] = useState(reducedBool);
+
+  const onHeroChatDone = useCallback(() => {
+    setPhoneShowSwipe(true);
+  }, []);
+
+  useEffect(() => {
+    if (reducedBool) setPhoneShowSwipe(true);
+  }, [reducedBool]);
+
   const heroRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
   const heroScale = useTransform(scrollY, [0, 600], [1, 0.94]);
@@ -76,13 +88,13 @@ export default function Hero() {
               style={{ x: line1X, y: line1Y }}
               className="display shimmer-text leading-[0.88] tracking-[-0.035em] text-[2.25rem] sm:text-[3.25rem] lg:text-[4.25rem] xl:text-[5rem]"
             >
-              <KineticLine text={LINE_1} delay={0.1} reduced={!!reduced} />
+              <KineticLine text={LINE_1} delay={0.1} reduced={reducedBool} />
             </motion.h1>
             <motion.h1
               style={{ x: line2X, y: line2Y }}
               className="display stroke-display italic leading-[0.88] tracking-[-0.035em] text-[2.25rem] sm:text-[3.25rem] lg:text-[4.25rem] xl:text-[5rem]"
             >
-              <KineticLine text={LINE_2} delay={0.35} reduced={!!reduced} />
+              <KineticLine text={LINE_2} delay={0.35} reduced={reducedBool} />
             </motion.h1>
 
             <motion.div
@@ -114,7 +126,10 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative z-0 flex justify-center"
           >
-            <PhoneWithParallax />
+            <PhoneWithParallax
+              showSwipeApp={phoneShowSwipe}
+              onChatComplete={onHeroChatDone}
+            />
           </motion.div>
         </div>
 
@@ -271,7 +286,13 @@ function FloatingDots() {
   );
 }
 
-function PhoneWithParallax() {
+function PhoneWithParallax({
+  showSwipeApp,
+  onChatComplete,
+}: {
+  showSwipeApp: boolean;
+  onChatComplete: () => void;
+}) {
   const reduced = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
   const mx = useMotionValue(0);
@@ -312,13 +333,21 @@ function PhoneWithParallax() {
           transformStyle: "preserve-3d",
         }}
       >
-        <Phone />
+        <Phone showSwipeApp={showSwipeApp} onChatComplete={onChatComplete} reduced={!!reduced} />
       </motion.div>
     </div>
   );
 }
 
-function Phone() {
+function Phone({
+  showSwipeApp,
+  onChatComplete,
+  reduced,
+}: {
+  showSwipeApp: boolean;
+  onChatComplete: () => void;
+  reduced: boolean;
+}) {
   return (
     <div className="relative w-[218px] sm:w-[248px] lg:w-[278px] aspect-[9/19.5] isolate">
       <div
@@ -343,10 +372,32 @@ function Phone() {
         <div className="relative w-full h-full rounded-[34px] overflow-hidden bg-ink-05">
           <DynamicIsland />
           <StatusBar />
-          <AppChrome />
-          <CardStack />
-          <Glare />
-          <GestureHint />
+          <AnimatePresence mode="wait">
+            {!showSwipeApp ? (
+              <motion.div
+                key="hero-chat"
+                className="absolute inset-0 z-[12]"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <HeroGroupChat reduced={reduced} onDone={onChatComplete} />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="hero-swipe"
+                className="absolute inset-0 z-[12]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <AppChrome />
+                <CardStack />
+                <Glare />
+                <GestureHint />
+              </motion.div>
+            )}
+          </AnimatePresence>
           <HomeIndicator />
         </div>
       </div>
