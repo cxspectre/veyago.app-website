@@ -4,12 +4,25 @@
 
 :root {
   --font-syne: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-dm-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-fraunces: "Fraunces", Georgia, serif;
+  /* identity v2 color tokens */
+  --ink-00: #060810;
+  --ink-05: #09111F;
+  --ink-10: #0E1A2E;
+  --ink-20: #1A2540;
+  --ink-30: #2C3A50;
+  --ink-50: #4A5A70;
+  --ink-70: #8A9AAF;
+  --ink-90: #C8D4E0;
+  --ink-100: #F2F4F7;
+  --parchment: #D4C9A8;
+  --parchment-dim: #8A7A5A;
 }
 
 html {
-  background-color: #0A1628;
-  color: #FFFFFF;
+  background-color: #09111F;
+  color: #F2F4F7;
   scroll-behavior: smooth;
 }
 
@@ -24,8 +37,8 @@ html.cursor-none-all textarea {
 }
 
 ::selection {
-  background: #FFFFFF;
-  color: #0A1628;
+  background: #F2F4F7;
+  color: #09111F;
   text-shadow: none;
 }
 
@@ -37,7 +50,7 @@ html.cursor-none-all textarea {
 }
 
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-dm-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-feature-settings: "ss01" on, "cv11" on;
@@ -91,7 +104,7 @@ body::after {
   left: 0;
   right: 0;
   height: 120px;
-  background: linear-gradient(to bottom, rgba(6, 14, 29, 0.6) 0%, rgba(6, 14, 29, 0) 100%);
+  background: linear-gradient(to bottom, rgba(9, 17, 31, 0.6) 0%, rgba(9, 17, 31, 0) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -124,7 +137,7 @@ body::after {
 
 .prose-mono p {
   margin: 0 0 1.1em 0;
-  color: #D1D5DB;
+  color: #C8D4E0;
   line-height: 1.65;
 }
 .prose-mono h2 {
@@ -132,23 +145,23 @@ body::after {
   font-weight: 700;
   font-size: 1.5rem;
   margin: 2em 0 0.6em 0;
-  color: #FFFFFF;
+  color: #F2F4F7;
 }
 .prose-mono h3 {
   font-family: var(--font-syne);
   font-weight: 700;
   font-size: 1.15rem;
   margin: 1.6em 0 0.4em 0;
-  color: #FFFFFF;
+  color: #F2F4F7;
 }
-.prose-mono ul { padding-left: 1.2em; margin: 0 0 1.1em; color: #D1D5DB; }
+.prose-mono ul { padding-left: 1.2em; margin: 0 0 1.1em; color: #C8D4E0; }
 .prose-mono ul li { margin: 0.3em 0; }
-.prose-mono a { color: #FFFFFF; text-decoration: underline; text-underline-offset: 3px; }
+.prose-mono a { color: #F2F4F7; text-decoration: underline; text-underline-offset: 3px; }
 .prose-mono blockquote {
-  border-left: 2px solid #FFFFFF;
+  border-left: 2px solid #D4C9A8;
   padding-left: 1rem;
   margin: 1.4em 0;
-  color: #F4F8FB;
+  color: #C8D4E0;
   font-style: italic;
 }
 

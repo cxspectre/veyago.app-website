@@ -1,4 +1,5 @@
 import Link from "next/link";
+import VeyagoWordmark from "@/components/VeyagoWordmark";
 
 const cols: { title: string; links: { href: string; label: string }[] }[] = [
   {
@@ -51,11 +52,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {cols.map((col) => (
             <div key={col.title}>
-              <div className="text-xs uppercase tracking-widest text-gray-3 mb-4">{col.title}</div>
+              <div className="text-xs uppercase tracking-widest text-ink-30 mb-4">{col.title}</div>
               <ul className="space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <Link href={l.href} className="text-sm text-gray-1 hover:text-white transition-colors">
+                    <Link
+                      href={l.href}
+                      className="text-sm text-ink-70 hover:text-ink-100 transition-colors"
+                    >
                       {l.label}
                     </Link>
                   </li>
@@ -67,18 +71,39 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-            <div className="display text-lg">Veyago</div>
-            <div className="text-xs text-gray-3">
-              © 2026 Veyago Inc. — a Delaware C-Corp
-            </div>
+            <VeyagoWordmark size="sm" />
+            <div className="text-xs text-ink-30">© 2026 Veyago Inc. — a Delaware C-Corp</div>
           </div>
           <div className="flex items-center gap-5">
-            <a href="https://linkedin.com/company/veyago" className="text-xs text-gray-2 hover:text-white">LinkedIn</a>
-            <a href="https://instagram.com/veyago" className="text-xs text-gray-2 hover:text-white">Instagram</a>
-            <a href="https://tiktok.com/@veyago" className="text-xs text-gray-2 hover:text-white">TikTok</a>
-            <a href="https://x.com/veyago" className="text-xs text-gray-2 hover:text-white">X</a>
-            <Link href="/status" className="text-xs text-gray-2 hover:text-white inline-flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
+            <a
+              href="https://linkedin.com/company/veyago"
+              className="text-xs text-ink-50 hover:text-ink-90 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://instagram.com/veyago"
+              className="text-xs text-ink-50 hover:text-ink-90 transition-colors"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://tiktok.com/@veyago"
+              className="text-xs text-ink-50 hover:text-ink-90 transition-colors"
+            >
+              TikTok
+            </a>
+            <a
+              href="https://x.com/veyago"
+              className="text-xs text-ink-50 hover:text-ink-90 transition-colors"
+            >
+              X
+            </a>
+            <Link
+              href="/status"
+              className="text-xs text-ink-50 hover:text-ink-90 transition-colors inline-flex items-center gap-2"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-live" />
               Status
             </Link>
           </div>

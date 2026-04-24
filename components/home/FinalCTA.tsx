@@ -28,7 +28,7 @@ export default function FinalCTA() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.55) 55%, rgba(10,22,40,0.92) 100%)",
+            "linear-gradient(to bottom, rgba(9,17,31,0.88) 0%, rgba(9,17,31,0.55) 55%, rgba(9,17,31,0.92) 100%)",
         }}
       />
       <div
@@ -58,7 +58,7 @@ export default function FinalCTA() {
           <div className="mt-12 flex flex-wrap gap-3 items-center">
             <MagneticLink
               href="/waitlist"
-              className="group bg-white text-navy px-7 py-4 rounded-btn font-medium text-sm inline-flex items-center gap-2 hover:bg-offwhite transition-colors"
+              className="group bg-ink-100 text-ink-00 px-7 py-4 rounded-btn font-medium text-sm inline-flex items-center gap-2 hover:bg-ink-90 transition-colors"
             >
               Join the waitlist
               <span aria-hidden>→</span>

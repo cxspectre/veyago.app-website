@@ -42,7 +42,7 @@ export default function PageHeroBackdrop({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.48) 40%, rgba(10,22,40,0.76) 70%, rgba(10,22,40,0.94) 100%)",
+              "linear-gradient(to bottom, rgba(9,17,31,0.92) 0%, rgba(9,17,31,0.48) 40%, rgba(9,17,31,0.76) 70%, rgba(9,17,31,0.94) 100%)",
           }}
         />
         <div

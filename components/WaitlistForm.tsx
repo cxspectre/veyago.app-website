@@ -66,7 +66,7 @@ export default function WaitlistForm({ compact = false, showReferredBy = false }
       <button
         type="submit"
         disabled={state === "submitting"}
-        className="bg-white text-navy px-5 py-3 rounded-btn font-medium text-sm disabled:opacity-60"
+        className="bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium text-sm disabled:opacity-60"
       >
         {state === "submitting" ? "Adding you…" : "Join the waitlist"}
       </button>

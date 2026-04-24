@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import MagneticLink from "@/components/MagneticLink";
+import VeyagoWordmark from "@/components/VeyagoWordmark";
 
 const links = [
   { href: "/features", label: "Features" },
@@ -34,33 +35,32 @@ export default function TopNav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-200 ease-out ${
-        scrolled || open ? "bg-navy/85 backdrop-blur-md border-b border-white/5" : "bg-transparent"
+        scrolled || open
+          ? "bg-ink-05/90 backdrop-blur-md border-b border-white/5"
+          : "bg-transparent"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between">
-        <Link
-          href="/"
-          className="display text-lg tracking-tight"
-          aria-label="Veyago home"
-          onClick={() => setOpen(false)}
-        >
-          Veyago
+        <Link href="/" aria-label="Veyago home" onClick={() => setOpen(false)}>
+          <VeyagoWordmark size="sm" />
         </Link>
 
-        <div className="hidden md:flex items-center gap-8 text-sm text-gray-1">
+        <div className="hidden md:flex items-center gap-8 text-sm text-ink-50">
           {links.map((l) => {
             const active = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
             return (
               <Link
                 key={l.href}
                 href={l.href}
-                className={`relative py-2 transition-colors ${active ? "text-white" : "hover:text-white"}`}
+                className={`relative py-2 transition-colors ${
+                  active ? "text-ink-70" : "hover:text-ink-90"
+                }`}
               >
                 {l.label}
                 {active && (
                   <span
                     aria-hidden
-                    className="absolute left-0 right-0 -bottom-0.5 h-px bg-white/70"
+                    className="absolute left-0 right-0 -bottom-0.5 h-px bg-ink-70"
                   />
                 )}
               </Link>
@@ -71,13 +71,13 @@ export default function TopNav() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/sign-in"
-            className="text-sm text-gray-1 hover:text-white px-3 py-2 rounded-btn transition-colors"
+            className="text-sm text-ink-50 hover:text-ink-90 px-3 py-2 rounded-btn transition-colors"
           >
             Sign in
           </Link>
           <MagneticLink
             href="/waitlist"
-            className="text-sm bg-white text-navy px-4 py-2 rounded-btn font-medium hover:bg-offwhite transition-colors"
+            className="text-sm bg-ink-100 text-ink-00 px-4 py-2 rounded-btn font-medium hover:bg-ink-90 transition-colors"
           >
             Get early access
           </MagneticLink>
@@ -92,13 +92,17 @@ export default function TopNav() {
           <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-[5px]">
             <span
-              className={`h-[2px] w-5 bg-white transition-transform duration-200 ${
+              className={`h-[2px] w-5 bg-ink-100 transition-transform duration-200 ${
                 open ? "translate-y-[7px] rotate-45" : ""
               }`}
             />
-            <span className={`h-[2px] w-5 bg-white transition-opacity duration-200 ${open ? "opacity-0" : ""}`} />
             <span
-              className={`h-[2px] w-5 bg-white transition-transform duration-200 ${
+              className={`h-[2px] w-5 bg-ink-100 transition-opacity duration-200 ${
+                open ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`h-[2px] w-5 bg-ink-100 transition-transform duration-200 ${
                 open ? "-translate-y-[7px] -rotate-45" : ""
               }`}
             />
@@ -107,13 +111,13 @@ export default function TopNav() {
       </nav>
 
       {open && (
-        <div className="md:hidden fixed inset-0 top-16 bg-navy z-30 px-5 py-8 flex flex-col gap-6 text-2xl display">
+        <div className="md:hidden fixed inset-0 top-16 bg-ink-05 z-30 px-5 py-8 flex flex-col gap-6 text-2xl font-display">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="border-b border-white/10 pb-4"
+              className="border-b border-white/10 pb-4 text-ink-100"
             >
               {l.label}
             </Link>
@@ -122,14 +126,14 @@ export default function TopNav() {
             <Link
               href="/sign-in"
               onClick={() => setOpen(false)}
-              className="flex-1 text-center text-base border border-white/20 px-4 py-3 rounded-btn"
+              className="flex-1 text-center text-base border border-white/20 px-4 py-3 rounded-btn text-ink-90"
             >
               Sign in
             </Link>
             <Link
               href="/waitlist"
               onClick={() => setOpen(false)}
-              className="flex-1 text-center text-base bg-white text-navy px-4 py-3 rounded-btn font-medium"
+              className="flex-1 text-center text-base bg-ink-100 text-ink-00 px-4 py-3 rounded-btn font-medium"
             >
               Get early access
             </Link>
