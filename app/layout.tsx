@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
-import ChapterRail from "@/components/ChapterRail";
 
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne", weight: ["400", "500", "600", "700", "800"] });
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", weight: ["300", "400", "500"] });
@@ -61,7 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <CustomCursor />
         <ScrollProgress />
-        <ChapterRail />
         <TopNav />
         <main id="main">{children}</main>
         <Footer />
