@@ -31,6 +31,7 @@ const urls = [
   "/acceptable-use",
   "/security",
   "/gdpr",
+  "/affiliates",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
