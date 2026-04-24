@@ -55,7 +55,7 @@ export default function Hero() {
       ref={heroRef}
       onMouseMove={onHeroMove}
       onMouseLeave={onHeroLeave}
-      className="relative min-h-[100svh] flex items-center overflow-hidden bg-navy-deep pt-16 sm:pt-20 pb-8"
+      className="relative min-h-[100svh] flex items-center overflow-hidden bg-ink-00 pt-16 sm:pt-20 pb-8"
     >
       <HeroPhotoBackdrop />
       <Backdrop />
@@ -93,7 +93,7 @@ export default function Hero() {
               <div className="mt-8 lg:mt-10">
                 <MagneticLink
                   href="/waitlist"
-                  className="group bg-white text-navy px-5 py-3 rounded-btn font-medium text-sm inline-flex items-center gap-2 hover:bg-offwhite transition-colors"
+                  className="group bg-ink-100 text-ink-00 px-5 py-3 rounded-btn font-medium text-sm inline-flex items-center gap-2 hover:bg-ink-90 transition-colors"
                 >
                   Get early access
                   <span aria-hidden>→</span>
@@ -186,7 +186,7 @@ function HeroPhotoBackdrop() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.5) 42%, rgba(10,22,40,0.78) 72%, rgba(10,22,40,0.94) 100%)",
+            "linear-gradient(to bottom, rgba(6,8,16,0.92) 0%, rgba(6,8,16,0.5) 42%, rgba(6,8,16,0.78) 72%, rgba(6,8,16,0.94) 100%)",
         }}
       />
       <div
@@ -329,7 +329,7 @@ function Phone() {
         aria-hidden
         className="absolute -inset-7 sm:-inset-9 bg-gradient-to-tr from-white/[0.08] via-white/[0.02] to-transparent blur-2xl rounded-[60px] pointer-events-none"
       />
-      <div className="relative w-full h-full rounded-[42px] bg-[#050a14] border border-white/10 p-[9px] shadow-[0_60px_120px_-40px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.04)_inset,0_0_60px_-20px_rgba(255,255,255,0.06)_inset]">
+      <div className="relative w-full h-full rounded-[42px] bg-ink-00 border border-white/10 p-[9px] shadow-[0_60px_120px_-40px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.04)_inset,0_0_60px_-20px_rgba(255,255,255,0.06)_inset]">
         <div aria-hidden className="absolute inset-[3px] rounded-[40px] ring-1 ring-white/[0.06] pointer-events-none" />
         <div
           aria-hidden
@@ -340,7 +340,7 @@ function Phone() {
             mixBlendMode: "screen",
           }}
         />
-        <div className="relative w-full h-full rounded-[34px] overflow-hidden bg-[#060d18]">
+        <div className="relative w-full h-full rounded-[34px] overflow-hidden bg-ink-05">
           <DynamicIsland />
           <StatusBar />
           <AppChrome />
@@ -406,8 +406,8 @@ function AppChrome() {
   return (
     <div className="absolute left-0 right-0 top-10 z-[25] border-b border-white/[0.05] bg-gradient-to-b from-black/38 via-black/12 to-transparent px-5 pb-2 pt-0.5 backdrop-blur-[8px]">
       <div className="flex items-center justify-between">
-        <span className="display text-xs tracking-tight text-white [text-shadow:0_1px_14px_rgba(0,0,0,0.92)]">
-          Veyago
+        <span className="font-display font-bold text-xs tracking-[-0.6px] text-ink-100 [text-shadow:0_1px_14px_rgba(0,0,0,0.92)]">
+          veyag<span style={{ color: "var(--parchment)" }}>o</span>
         </span>
         <div className="flex items-center gap-2.5 text-white/[0.92] drop-shadow-[0_1px_8px_rgba(0,0,0,0.9)]">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

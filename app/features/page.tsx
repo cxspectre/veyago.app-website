@@ -90,7 +90,7 @@ export default function FeaturesIndex() {
                     />
                     <div
                       aria-hidden
-                      className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-transparent to-transparent opacity-90"
+                      className="absolute inset-0 bg-gradient-to-t from-[#09111F]/90 via-transparent to-transparent opacity-90"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5 sm:p-6">

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Syne, Inter } from "next/font/google";
+import { Syne, DM_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
 import Footer from "@/components/Footer";
@@ -8,8 +8,14 @@ import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import ChapterRail from "@/components/ChapterRail";
 
-const syne = Syne({ subsets: ["latin"], variable: "--font-syne", weight: ["500", "700", "800"] });
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["400", "500", "600", "700"] });
+const syne = Syne({ subsets: ["latin"], variable: "--font-syne", weight: ["400", "500", "600", "700", "800"] });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", weight: ["300", "400", "500"] });
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  weight: "variable",
+  style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://veyago.app"),
@@ -28,22 +34,28 @@ export const metadata: Metadata = {
     url: "https://veyago.app",
   },
   twitter: { card: "summary_large_image", site: "@veyago" },
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/favicon.svg",
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A1628",
+  themeColor: "#09111F",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${syne.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-navy text-white antialiased">
+    <html lang="en" className={`${syne.variable} ${dmSans.variable} ${fraunces.variable}`}>
+      <body className="min-h-screen bg-ink-05 text-ink-100 antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:bg-white focus:text-navy focus:px-4 focus:py-2 focus:rounded-btn focus:z-50"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:bg-ink-100 focus:text-ink-05 focus:px-4 focus:py-2 focus:rounded-btn focus:z-50"
         >
           Skip to content
         </a>

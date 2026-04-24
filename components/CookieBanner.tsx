@@ -30,7 +30,7 @@ export default function CookieBanner() {
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => choose("accept")}
-          className="text-sm bg-white text-navy px-3.5 py-2 rounded-btn font-medium"
+          className="text-sm bg-ink-100 text-ink-00 px-3.5 py-2 rounded-btn font-medium"
         >
           Accept all
         </button>

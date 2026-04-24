@@ -115,7 +115,7 @@ export default function CustomCursor() {
           className={`display text-[9px] tracking-[0.22em] transition-opacity duration-200 ${
             hasLabel ? "opacity-100" : "opacity-0"
           }`}
-          style={{ color: hasLabel ? "#0A1628" : "transparent" }}
+          style={{ color: hasLabel ? "#09111F" : "transparent" }}
         >
           {label}
         </span>
