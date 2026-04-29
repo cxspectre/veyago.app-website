@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/account/", "/investors/", "/invest"],
+        disallow: ["/account/", "/investors/room"],
       },
     ],
     sitemap: "https://veyago.app/sitemap.xml",

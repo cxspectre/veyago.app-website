@@ -64,7 +64,7 @@ export default function DMCA() {
         <li>Identification of the material that was removed and the location where it appeared before removal.</li>
         <li>A statement, under penalty of perjury, that you have a good-faith belief the material was removed as a result of mistake or misidentification.</li>
         <li>Your name, address, and telephone number.</li>
-        <li>A statement that you <strong>consent to the jurisdiction</strong> of the US Federal District Court for the judicial district in which your address is located (or, if outside the US, the District of Delaware), and that you will accept service of process from the person who submitted the original notice or their agent.</li>
+        <li>A statement that you <strong>consent to the jurisdiction</strong> of the US Federal District Court for the judicial district in which your address is located (or, if outside the US, the <strong>Southern District of New York</strong>), and that you will accept service of process from the person who submitted the original notice or their agent.</li>
       </ol>
       <p>Send counter-notices to <a href="mailto:hello@veyago.app">hello@veyago.app</a> with "DMCA Counter-Notice" in the subject line.</p>
       <p><strong>What happens next.</strong> We'll forward your counter-notice to the original complainant. Unless they file a court action within <strong>10 to 14 business days</strong>, we'll restore the content.</p>

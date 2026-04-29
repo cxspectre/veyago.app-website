@@ -4,18 +4,18 @@ import { AppStorePair } from "@/components/CTABlocks";
 
 export const metadata: Metadata = {
   title: "Download Veyago",
-  description: "Download Veyago for iOS and Android. Shipping early Q3 2026.",
+  description: "Download Veyago for iOS and Android. Launching Q3 2026 (TestFlight beta targeted June 2026).",
 };
 
 export default function Download() {
   return (
     <div className="min-h-[100dvh] flex items-center pt-24 pb-16">
       <div className="mx-auto max-w-3xl w-full px-5 sm:px-8 text-center">
-        <div className="text-xs uppercase tracking-widest text-gray-3 mb-5">Early Q3 2026</div>
+        <div className="text-xs uppercase tracking-widest text-gray-3 mb-5">Q3 2026</div>
         <h1 className="display text-5xl sm:text-7xl mb-6">Veyago is almost here.</h1>
         <p className="text-gray-1 max-w-xl mx-auto mb-10">
-          The iOS and Android apps ship together in early Q3 2026. Drop your email, and we’ll tell you the moment
-          it’s live on your phone.
+          The iOS and Android apps ship together in Q3 2026 (TestFlight targeted June 2026). Drop your email, and
+          we’ll tell you the moment it’s live on your phone.
         </p>
 
         <div className="max-w-md mx-auto">

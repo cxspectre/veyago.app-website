@@ -23,7 +23,7 @@ export default function Privacy() {
         Veyago is a travel destination discovery app and website. This policy explains how <strong>Veyago Inc.</strong> ("Veyago", "we", "us") handles personal data when you use our mobile apps (iOS and Android) and our website at veyago.app (together, the "Service").
       </p>
       <p>
-        <strong>Data controller.</strong> Veyago Inc., a Delaware corporation with its operational headquarters at Brussels, Belgium. Contact: <a href="mailto:hello@veyago.app">hello@veyago.app</a>.
+        <strong>Data controller.</strong> Veyago Inc., a New York corporation with its operational headquarters in Belgium. Contact: <a href="mailto:hello@veyago.app">hello@veyago.app</a>.
       </p>
       <p>
         <strong>Data protection contact.</strong> Until we appoint a formal Data Protection Officer, all privacy questions are handled directly by our CEO and founder, <strong>Cassian Drefke</strong>, at <a href="mailto:hello@veyago.app">hello@veyago.app</a>.
@@ -313,7 +313,7 @@ export default function Privacy() {
       <p>When we make material changes we will notify you by email and through an in-app notice at least <strong>14 days</strong> before they take effect. Minor clarifications are reflected in the "Last updated" date above.</p>
 
       <h2>14. Contact</h2>
-      <p><strong>Veyago Inc.</strong> — Brussels, Belgium (operational HQ) / Delaware, USA (registered) — <a href="mailto:hello@veyago.app">hello@veyago.app</a></p>
+      <p><strong>Veyago Inc.</strong> — Belgium (operational HQ) / New York, USA (incorporated) — <a href="mailto:hello@veyago.app">hello@veyago.app</a></p>
     </LegalPage>
   );
 }

@@ -18,6 +18,7 @@ const cols: { title: string; links: { href: string; label: string }[] }[] = [
     links: [
       { href: "/about", label: "About" },
       { href: "/investors", label: "Investors" },
+      { href: "/invest", label: "Invest (Wefunder)" },
       { href: "/careers", label: "Careers" },
       { href: "/contact", label: "Contact" },
     ],
@@ -71,7 +72,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <VeyagoWordmark size="sm" />
-            <div className="text-xs text-ink-30">© 2026 Veyago Inc. — a Delaware C-Corp</div>
+            <div className="text-xs text-ink-30">© 2026 Veyago Inc. — a New York corporation</div>
           </div>
           <div className="flex items-center gap-5">
             <a

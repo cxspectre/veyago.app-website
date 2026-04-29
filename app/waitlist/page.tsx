@@ -14,8 +14,8 @@ export default function Waitlist() {
         <div className="text-xs uppercase tracking-widest text-gray-3 mb-5">Early access</div>
         <h1 className="display text-4xl sm:text-6xl mb-4">Get Veyago before everyone else.</h1>
         <p className="text-gray-1 mb-10 max-w-lg">
-          Veyago ships in early Q3 2026. The waitlist gets it first — with a TestFlight invite and a founder-signed
-          launch note.
+          Veyago ships in Q3 2026. The waitlist gets it first — with a TestFlight invite (target June 2026) and a
+          founder-signed launch note.
         </p>
 
         <WaitlistForm showReferredBy />

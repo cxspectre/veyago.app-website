@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     template: "%s · Veyago",
   },
   description:
-    "Veyago is a swipe-and-bracket travel app that ends group-chat deadlock and picks a destination in under five minutes.",
+    "A travel destination discovery app that turns group travel indecision into a ten-minute game — Tinder-style swipes plus a four-round bracket, then an AI itinerary with booking links.",
   openGraph: {
     type: "website",
     siteName: "Veyago",
     title: "Veyago — Your next voyage starts with a swipe.",
     description:
-      "Swipe-and-bracket travel app. Ends group-chat deadlock. Picks a destination in under five minutes.",
+      "Turn group travel indecision into a ten-minute game. Swipe, bracket, decide — iOS and Android in Q3 2026.",
     url: "https://veyago.app",
   },
   twitter: { card: "summary_large_image", site: "@veyago" },

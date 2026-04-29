@@ -21,7 +21,7 @@ function section(title: string, body: string): string {
 }
 
 function footer(path: string): string {
-  return `${RULE}\nhttps://veyago.app${path}\nVeyago Inc. · Delaware C-Corp · veyago.app`;
+  return `${RULE}\nhttps://veyago.app${path}\nVeyago Inc. · New York corporation · veyago.app`;
 }
 
 export function buildWaitlistDraftBody(email: string, referredBy: string): string {

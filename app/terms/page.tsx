@@ -15,12 +15,12 @@ export default function Terms() {
       lastUpdated="24 April 2026"
     >
       <div className="legal-plain">
-        <strong>The short version.</strong> These are the rules for using Veyago. Be 16 or older, use the app honestly, don't try to break it, and remember that destination suggestions are suggestions, not guarantees. If there's ever a serious dispute, Delaware law applies — but if you're a consumer in Europe or the UK, your local consumer protection rights still apply in full.
+        <strong>The short version.</strong> These are the rules for using Veyago. Be 16 or older, use the app honestly, don't try to break it, and remember that destination suggestions are suggestions, not guarantees. If there's ever a serious dispute, New York law applies — but if you're a consumer in Europe or the UK, your local consumer protection rights still apply in full.
       </div>
 
       <h2>1. Agreement</h2>
       <p>
-        These Terms of Service (the "Terms") are a contract between you and <strong>Veyago Inc.</strong>, a Delaware corporation with operational headquarters in Brussels, Belgium ("Veyago", "we", "us"). They govern your use of our mobile apps, our website at veyago.app, and everything we build on top of them (together, the "Service").
+        These Terms of Service (the "Terms") are a contract between you and <strong>Veyago Inc.</strong>, a New York corporation with operational headquarters in Belgium ("Veyago", "we", "us"). They govern your use of our mobile apps, our website at veyago.app, and everything we build on top of them (together, the "Service").
       </p>
       <p>By creating an account, installing our app, or using the Service, you agree to these Terms. If you don't agree, please don't use the Service.</p>
 
@@ -120,12 +120,12 @@ export default function Terms() {
 
       <h2>16. Governing law and dispute resolution</h2>
       <div className="legal-plain">
-        Delaware law governs these Terms. For most disputes we'd rather talk it out first. EU and UK consumers keep their home-country court rights.
+        New York law governs these Terms. For most disputes we'd rather talk it out first. EU and UK consumers keep their home-country court rights.
       </div>
-      <p><strong>Governing law.</strong> These Terms are governed by the internal laws of the <strong>State of Delaware</strong>, without regard to conflict-of-laws principles.</p>
+      <p><strong>Governing law.</strong> These Terms are governed by the internal laws of the <strong>State of New York</strong>, without regard to conflict-of-laws principles.</p>
       <p><strong>Informal resolution first.</strong> Before filing anything formal, please email <a href="mailto:hello@veyago.app">hello@veyago.app</a> with a clear description of the problem. We commit to a good-faith response within 30 days.</p>
       <p><strong>EU and UK consumers.</strong> If you are a consumer habitually resident in the EU or UK, you can bring proceedings in the courts of your country of residence, and the mandatory consumer protection law of that country applies to you. EU consumers may also use the European Commission's <a href="https://ec.europa.eu/consumers/odr" rel="noreferrer">Online Dispute Resolution platform</a>.</p>
-      <p><strong>All other users — binding arbitration.</strong> Any dispute that cannot be resolved informally within 30 days will be resolved by <strong>binding individual arbitration</strong> administered by the <strong>American Arbitration Association</strong> under its Consumer Arbitration Rules. The arbitration will be held in New Castle County, Delaware, or remotely at the consumer's request.</p>
+      <p><strong>All other users — binding arbitration.</strong> Any dispute that cannot be resolved informally within 30 days will be resolved by <strong>binding individual arbitration</strong> administered by the <strong>American Arbitration Association</strong> under its Consumer Arbitration Rules. The arbitration will be held in <strong>New York County, New York</strong>, or remotely at the consumer's request.</p>
       <p><strong>Class action waiver.</strong> Each party may bring claims only in an individual capacity, not as a class member in any purported class or representative proceeding.</p>
       <p><strong>30-day opt-out.</strong> You may opt out of arbitration within 30 days of first accepting these Terms by emailing <a href="mailto:hello@veyago.app">hello@veyago.app</a> with "Arbitration opt-out" in the subject line.</p>
 
@@ -136,7 +136,7 @@ export default function Terms() {
       <p>These Terms, together with the Privacy Policy and any policies referenced here, are the entire agreement between you and Veyago about the Service. If any provision is unenforceable, the rest still applies. Notices to Veyago: <a href="mailto:hello@veyago.app">hello@veyago.app</a>.</p>
 
       <h2>19. Contact</h2>
-      <p><strong>Veyago Inc.</strong> — Brussels, Belgium (operational HQ) / Delaware, USA (registered) — <a href="mailto:hello@veyago.app">hello@veyago.app</a></p>
+      <p><strong>Veyago Inc.</strong> — Belgium (operational HQ) / New York, USA (incorporated) — <a href="mailto:hello@veyago.app">hello@veyago.app</a></p>
     </LegalPage>
   );
 }

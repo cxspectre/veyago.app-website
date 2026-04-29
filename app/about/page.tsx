@@ -108,16 +108,20 @@ export default function About() {
           <div className="prose-mono min-w-0">
             <h2 className="!mt-0">The company</h2>
             <p>
-              <strong>Veyago Inc.</strong> is a Delaware C-Corporation, forming May–June 2026. 1,000,000 shares
-              authorised. Sole founder and 100% shareholder: <strong>Cassian Drefke</strong>.
+              <strong>Veyago Inc.</strong> is a New York business corporation, incorporated April 2026 (DOS ID
+              7899587). Registered agent for service of process in Albany, NY. Sole founder and 100% shareholder:{" "}
+              <strong>Cassian Drefke</strong>.
             </p>
             <p>
-              The app is approximately <strong>20% built</strong> as of April 2026. Launch target:{" "}
-              <strong>Early Q3 2026</strong> on iOS and Android simultaneously.
+              The mobile app is roughly <strong>45% built</strong> as of April 2026 (React Native, Expo, Supabase).
+              Public launch target: <strong>Q3 2026</strong> on iOS and Android together, with a TestFlight beta
+              targeted for June 2026.
             </p>
             <p>
-              A pre-seed round is open — <strong>€350,000</strong> on a SAFE note. Minimum check:{" "}
-              <strong>€5,000</strong>.
+              A <strong>pre-seed</strong> round is open — <strong>€350,000</strong> on a YC-standard post-money SAFE
+              with a <strong>$3.5M–$4.5M</strong> valuation cap. Minimum direct check: <strong>€5,000</strong>. A{" "}
+              <strong>Wefunder</strong> Reg CF allocation is also open; community investors can participate from{" "}
+              <strong>$100</strong> — see <Link href="/invest" className="text-white underline decoration-white/25 underline-offset-4 hover:decoration-white/60">Invest via Wefunder</Link>.
             </p>
             <div className="not-prose mt-10 flex flex-wrap gap-3">
               <Link
@@ -136,7 +140,7 @@ export default function About() {
           </div>
           <dl className="grid shrink-0 grid-cols-2 gap-6 gap-y-8 text-sm sm:min-w-[16rem]">
             <Fact label="Founded" value="2026" />
-            <Fact label="HQ" value="Brussels · Delaware" />
+            <Fact label="HQ" value="Belgium · New York (inc.)" />
             <Fact label="Employees" value="1" />
             <Fact label="Stack" value="React Native · Supabase · Next.js" />
           </dl>
@@ -165,7 +169,8 @@ export default function About() {
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <h2 className="display text-xl text-white sm:text-2xl">Questions</h2>
           <p className="mt-4 text-sm leading-relaxed text-gray-1 sm:text-base">
-            Why solo, why Delaware, why a SAFE, what the timeline really is — a longer FAQ belongs here. Until
+            Why solo, why a New York corporation, why a SAFE, what the timeline really is — a longer FAQ belongs
+            here. Until
             it ships, start with{" "}
             <Link
               href="/faq/why-solo"
@@ -209,11 +214,12 @@ function FounderCard() {
         </div>
       </div>
       <p className="text-sm leading-relaxed text-gray-1">
-        Solo founder. Building Veyago from the ground up — product, code, design, and strategy.
+        Founder & CEO. Product strategy, full-stack engineering (React Native, Supabase, OpenAI), UI/UX, and
+        investor relations — shipping the first versions end to end.
       </p>
       <ul className="mt-5 space-y-2 text-xs text-gray-1">
-        <li>· React Native · Supabase · full-stack</li>
-        <li>· Brussels, Belgium</li>
+        <li>· Waterloo, Belgium — building US network (New York)</li>
+        <li>· BSc International Management (in progress) · EN / NL / FR / DE</li>
       </ul>
       <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/5 pt-5 text-xs">
         <a
